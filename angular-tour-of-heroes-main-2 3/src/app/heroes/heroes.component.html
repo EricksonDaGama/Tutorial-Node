@@ -1,0 +1,23 @@
+<h2>My Heroes</h2>
+<mat-list class="heroes" role="list">
+  <mat-divider></mat-divider>
+  <mat-list-item role="listitem" *ngFor="let hero of heroes">
+    <div class="item">
+      <a mat-button routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button mat-flat-button type="button" class="delete" title="delete hero"
+        (click)="delete(hero)"><mat-icon>delete</mat-icon></button>
+    </div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+<div class="addnew">
+  <label for="new-hero">New Hero Name: </label>
+  <input id="new-hero" #heroName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button mat-flat-button color="primary" (click)="add(heroName.value); heroName.value=''">
+    Add Hero
+  </button>
+</div>

@@ -1,0 +1,15 @@
+/* MessagesComponent's private CSS styles */
+h2 {
+  font-weight: lighter;
+  margin: 0.25rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+section div {
+  background-color: #f4f4f4;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.25rem;
+}

@@ -1,0 +1,25 @@
+<div class="herodetail" *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div>
+    <span>id: </span>{{hero.id}}
+  </div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+  <!-- Novo campo para seleção do pet -->
+  <div>
+    <label for="hero-pet">Pet: </label>
+    <select id="hero-pet" [(ngModel)]="hero.pet" (ngModelChange)="onPetSelected($event)">
+      <option *ngFor="let pet of pets" [ngValue]="pet">
+        {{ pet.name }}
+      </option>
+    </select>
+  </div>
+</div>
+<nav>
+  <div *ngIf="hero">
+    <button mat-flat-button color="primary" (click)="save()">Save</button>
+  </div>
+  <button mat-flat-button color="primary" (click)="goBack()">Back</button>
+</nav>

@@ -1,0 +1,11 @@
+<nav>
+  <mat-toolbar color="primary">
+    <h1>{{title}} Of Erickson</h1>
+    <span class="spacer"></span>
+    <a mat-flat-button color="accent" routerLink="/dashboard">Dashboard</a>
+    <a mat-flat-button color="accent" routerLink="/heroes">Heroes</a>
+    <a mat-flat-button color="accent" routerLink="/pets">Pets</a>
+  </mat-toolbar>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

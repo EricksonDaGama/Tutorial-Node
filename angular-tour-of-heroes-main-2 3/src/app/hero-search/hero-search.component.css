@@ -1,0 +1,11 @@
+/* HeroSearch private styles */
+* {
+  text-align: center;
+  margin: auto;
+}
+
+#search-component {
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  background-color: #f8f8f8;
+}
